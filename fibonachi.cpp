@@ -31,10 +31,13 @@ private:
 
 std::vector<unsigned int> Fibonachi::m_FibCache(1, 1);
 
-unsigned f1(unsigned n) {
-  if (n == 0 || n == 1) {
+unsigned f1(unsigned n) 
+{
+  if (n == 0 || n == 1) 
+  {
     return 1;
   }
+  
   return f1(n - 1) + f1(n - 2);
 }
 
@@ -98,22 +101,6 @@ int main()
     //runner(n, f1);
     runner(n, f2);  //Execution time: 1 (ms)
     runner(n, f3);  //Execution time: 2807 (ms)
-
-    // for (unsigned i = 0; i < 20; i++)
-    // {
-    //     const unsigned n = rand() % 25;
-
-    //     const unsigned f1Res = f1(n);
-    //     const unsigned f2Res = f2(n);
-    //     const unsigned f3Res = f3(n);
-
-    //     if (f1Res != f2Res || f1Res != f3Res)
-    //         std::cout << "----->Error!" << std::endl;
-
-    //     std::cout << "f1(" << n << ") = " << f1(n) << std::endl;
-    //     std::cout << "f2(" << n << ") = " << f2(n) << std::endl;
-    //     std::cout << "f3(" << n << ") = " << f3(n) << std::endl;
-    // }
 
     return 0;
 }
